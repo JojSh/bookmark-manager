@@ -3,8 +3,8 @@
 ENV['RACK_ENV'] ||= 'test'
 require 'web_helper'
 
-# require File.join(File.dirname(__FILE__), '..', 'app/app.rb')
-require './app/app'
+require File.join(File.dirname(__FILE__), '..', 'app/app.rb')
+
 
 require 'capybara'
 require 'capybara/rspec'
