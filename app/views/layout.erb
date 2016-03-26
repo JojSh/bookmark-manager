@@ -8,6 +8,10 @@
     <% if this_user %>
       Welcome, <%= this_user.email %>
       <% end %>
+      <% if flash[:notice] %>
+        <div id='notice'><%= flash[:notice] %></div>
+        <p> </p>
+      <% end %>
       <%= yield %>
     </body>
   </html>

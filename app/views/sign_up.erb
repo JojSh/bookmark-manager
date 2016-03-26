@@ -1,11 +1,11 @@
 Sign up
 
 <form action="/register" method="post">
-  <input type="text" name="address" placeholder="Email">
+  <input type="email" name="email" placeholder="<%= @user.email %>" required>
 
   <input type="password" name="pw" placeholder="password">
 
-  <input type="password" name="pwc" placeholder="password">
+  <input type="password" name="pwc" placeholder="password confirmation">
 
   <input type="submit" value="Register">
 </form>

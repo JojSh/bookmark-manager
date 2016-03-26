@@ -22,11 +22,13 @@ def add_many_tags
   click_button 'Add link'
 end
 
-def sign_up
+def sign_up(email: "roxy@cat.com",
+            password: "12345678",
+            password_confirmation: "12345678")
   visit "/"
   click_button("Sign up")
-  fill_in :address, with: "joj@pigeons.com"
-  fill_in :pw, with: "pigeon1"
-  # fill_in :pwc, with: "pigeon1"
+  fill_in :email, with: email
+  fill_in :pw, with: password
+  fill_in :pwc, with: password_confirmation
   click_button("Register")
 end
