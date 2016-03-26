@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookmark Manager</title>
+  </head>
+
+  <body>
+    <% if this_user %>
+      Welcome, <%= this_user.email %>
+      <% end %>
+      <%= yield %>
+    </body>
+  </html>
