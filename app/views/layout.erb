@@ -6,12 +6,29 @@
 
   <body>
     <% if this_user %>
-      Welcome, <%= this_user.email %>
+      Welcome <%= this_user.email %>
+      <form method="post" action="/sessions">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit"  value="Sign out">
+      </form>
+    <% end %>
+
+    <% if flash[:notice] %>
+      <div id="notice">
+        <%= flash[:notice] %>
+      </div>
       <% end %>
-      <% if flash[:notice] %>
-        <div id='notice'><%= flash[:notice] %></div>
-        <p> </p>
-      <% end %>
-      <%= yield %>
-    </body>
-  </html>
+
+
+    <% if flash[:errors] && !flash[:errors].empty? %>
+      Refer to the following errors below:
+      <ul if="errors">
+        <% flash[:errors].each do |error| %>
+          <li><%= error %></li>
+          <p> </p>
+        <% end %>
+      </ul>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

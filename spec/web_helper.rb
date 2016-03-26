@@ -32,3 +32,10 @@ def sign_up(email: "roxy@cat.com",
   fill_in :pwc, with: password_confirmation
   click_button("Register")
 end
+
+def sign_in(email:, password:)
+  visit "/sessions/new"
+  fill_in :email, with: email
+  fill_in :password, with: password
+  click_button("Sign in")
+end
