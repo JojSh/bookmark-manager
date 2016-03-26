@@ -26,7 +26,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/register' do
-    user = User.create(email: params[:address], hash_password: params[:pw] )
+    user = User.create(email: params[:address], hash_password: params[:pw])
     @users = User.all
     session[:user_id] = user.id
     # p @users.first.email
