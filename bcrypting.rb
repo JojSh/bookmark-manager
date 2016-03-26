@@ -1,0 +1,3 @@
+require 'bcrypt'
+
+include BCrypt

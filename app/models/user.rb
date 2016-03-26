@@ -8,6 +8,6 @@ class User
   property :id,       Serial
   property :email,    String
   property :password, String
-  property :address, Text
+  
 
 end
