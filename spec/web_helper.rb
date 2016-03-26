@@ -27,5 +27,6 @@ def sign_up
   click_button("Sign up")
   fill_in :address, with: "joj@pigeons.com"
   fill_in :pw, with: "pigeon1"
+  # fill_in :pwc, with: "pigeon1"
   click_button("Register")
 end
